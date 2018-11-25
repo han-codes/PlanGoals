@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F36A0D90219492C700A0C99C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A0D8F219492C700A0C99C /* AppDelegate.swift */; };
-		F36A0D92219492C700A0C99C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A0D91219492C700A0C99C /* ViewController.swift */; };
+		F36A0D92219492C700A0C99C /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A0D91219492C700A0C99C /* GoalsVC.swift */; };
 		F36A0D95219492C700A0C99C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F36A0D93219492C700A0C99C /* Main.storyboard */; };
 		F36A0D98219492C700A0C99C /* goalpost_app.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F36A0D96219492C700A0C99C /* goalpost_app.xcdatamodeld */; };
 		F36A0D9A219492CB00A0C99C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F36A0D99219492CB00A0C99C /* Assets.xcassets */; };
@@ -18,7 +18,7 @@
 /* Begin PBXFileReference section */
 		F36A0D8C219492C700A0C99C /* goalpost-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "goalpost-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36A0D8F219492C700A0C99C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F36A0D91219492C700A0C99C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F36A0D91219492C700A0C99C /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
 		F36A0D94219492C700A0C99C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F36A0D97219492C700A0C99C /* goalpost_app.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = goalpost_app.xcdatamodel; sourceTree = "<group>"; };
 		F36A0D99219492CB00A0C99C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -56,8 +56,11 @@
 		F36A0D8E219492C700A0C99C /* goalpost-app */ = {
 			isa = PBXGroup;
 			children = (
+				F36A0DA72194930500A0C99C /* Extensions */,
+				F36A0DA6219492F600A0C99C /* Enums */,
+				F36A0DA5219492EB00A0C99C /* View */,
+				F36A0DA4219492E100A0C99C /* Controller */,
 				F36A0D8F219492C700A0C99C /* AppDelegate.swift */,
-				F36A0D91219492C700A0C99C /* ViewController.swift */,
 				F36A0D93219492C700A0C99C /* Main.storyboard */,
 				F36A0D99219492CB00A0C99C /* Assets.xcassets */,
 				F36A0D9B219492CB00A0C99C /* LaunchScreen.storyboard */,
@@ -65,6 +68,35 @@
 				F36A0D96219492C700A0C99C /* goalpost_app.xcdatamodeld */,
 			);
 			path = "goalpost-app";
+			sourceTree = "<group>";
+		};
+		F36A0DA4219492E100A0C99C /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F36A0D91219492C700A0C99C /* GoalsVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F36A0DA5219492EB00A0C99C /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F36A0DA6219492F600A0C99C /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		F36A0DA72194930500A0C99C /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -138,7 +170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F36A0D92219492C700A0C99C /* ViewController.swift in Sources */,
+				F36A0D92219492C700A0C99C /* GoalsVC.swift in Sources */,
 				F36A0D90219492C700A0C99C /* AppDelegate.swift in Sources */,
 				F36A0D98219492C700A0C99C /* goalpost_app.xcdatamodeld in Sources */,
 			);
@@ -286,7 +318,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C62Y8SVBJ2;
 				INFOPLIST_FILE = "goalpost-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -294,6 +328,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "win-with-kim.com.goalpost-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -303,7 +338,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = C62Y8SVBJ2;
 				INFOPLIST_FILE = "goalpost-app/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -311,6 +348,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "win-with-kim.com.goalpost-app";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
