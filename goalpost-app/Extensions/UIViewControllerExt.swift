@@ -10,6 +10,7 @@ import UIKit
 
 extension UIViewController {
     
+    // Give a navigation controller effect without a navigation controller
     func presentDetail(_ viewControllerToPresent: UIViewController) {
         let transition = CATransition()
         transition.duration = 0.3
