@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F32ED52821AC2C5500F126C3 /* GoalCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32ED52721AC2C5500F126C3 /* GoalCell.swift */; };
 		F36A0D90219492C700A0C99C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A0D8F219492C700A0C99C /* AppDelegate.swift */; };
 		F36A0D92219492C700A0C99C /* GoalsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F36A0D91219492C700A0C99C /* GoalsVC.swift */; };
 		F36A0D95219492C700A0C99C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F36A0D93219492C700A0C99C /* Main.storyboard */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F32ED52721AC2C5500F126C3 /* GoalCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalCell.swift; sourceTree = "<group>"; };
 		F36A0D8C219492C700A0C99C /* goalpost-app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "goalpost-app.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F36A0D8F219492C700A0C99C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F36A0D91219492C700A0C99C /* GoalsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoalsVC.swift; sourceTree = "<group>"; };
@@ -81,6 +83,7 @@
 		F36A0DA5219492EB00A0C99C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				F32ED52721AC2C5500F126C3 /* GoalCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F32ED52821AC2C5500F126C3 /* GoalCell.swift in Sources */,
 				F36A0D92219492C700A0C99C /* GoalsVC.swift in Sources */,
 				F36A0D90219492C700A0C99C /* AppDelegate.swift in Sources */,
 				F36A0D98219492C700A0C99C /* goalpost_app.xcdatamodeld in Sources */,
