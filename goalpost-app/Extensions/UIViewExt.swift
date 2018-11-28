@@ -26,6 +26,6 @@ extension UIView {
         UIView.animateKeyframes(withDuration: duration, delay: 0.0, options: UIView.KeyframeAnimationOptions.init(rawValue: curve), animations: {
             self.frame.origin.y += deltaY       // moves the View up right above the keyboard.
         }, completion: nil)
-        print("Self.Frame.Origin.Y: \(self.frame.origin.y), Frame + deltaY: \(self.frame.origin.y + deltaY)")
+        print("Self.Frame.Origin.Y: \(self.frame.origin.y)")
     }
 }

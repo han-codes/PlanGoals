@@ -17,6 +17,6 @@ class GoalCell: UITableViewCell {
     func configureCell(description: String, type: GoalType, progressAmount: Int) {
         self.goalDescriptionLbl.text = description
         self.goalTypeLbl.text = type.rawValue
-        self.goalProgressLbl.text = String(describing: progressAmount)
+        self.goalProgressLbl.text = String(describing: progressAmount)      // converts Int to String so we can set text of a label
     }
 }
