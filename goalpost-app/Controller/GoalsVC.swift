@@ -9,8 +9,10 @@
 import UIKit
 import CoreData
 
-class GoalsVC: UIViewController {
+let appDelegate = UIApplication.shared.delegate as? AppDelegate
 
+class GoalsVC: UIViewController {
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {

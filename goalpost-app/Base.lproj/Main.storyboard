@@ -339,6 +339,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XGs-dm-8ZF">
                                         <rect key="frame" x="15" y="33" width="14" height="25"/>
                                         <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="backBtnPressed:" destination="0v9-qe-WJQ" eventType="touchUpInside" id="dq1-93-bxI"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.42745098040000001" green="0.73725490199999999" blue="0.38823529410000002" alpha="1" colorSpace="calibratedRGB"/>
@@ -367,9 +370,6 @@
                                         <color key="textColor" red="0.42745098039215684" green="0.73725490196078436" blue="0.38823529411764707" alpha="1" colorSpace="calibratedRGB"/>
                                         <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="54"/>
                                         <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                                        <connections>
-                                            <action selector="pointsTxtField:" destination="0v9-qe-WJQ" eventType="editingDidEnd" id="5F6-UH-aBb"/>
-                                        </connections>
                                     </textField>
                                 </subviews>
                                 <constraints>
@@ -420,6 +420,7 @@
                     </view>
                     <connections>
                         <outlet property="createGoalBtn" destination="SGp-FL-NGm" id="pl5-Ml-fJz"/>
+                        <outlet property="pointsTextField" destination="eMo-wl-ZLn" id="IyA-zj-6xY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="z2K-tM-0cS" userLabel="First Responder" sceneMemberID="firstResponder"/>
