@@ -43,7 +43,10 @@ class CreateGoalVC: UIViewController, UITextViewDelegate {
         if goalTextView.text != "" && goalTextView.text != "What is your goal?" {
             guard let finishGoalVC = storyboard?.instantiateViewController(withIdentifier: "FinishGoalVC") as? FinishGoalVC else { return }
             finishGoalVC.initData(description: goalTextView.text, goalType: goalType)
-            presentDetail(finishGoalVC)
+
+            // will dismiss the current VC then present FinishGoalVC
+            // so if user needs to dismiss in FinishGoalVC, it'll skip CreateGoalVC and go to the previous VC
+            presentingViewController?.presentSecondaryDetail(finishGoalVC)
         }
     }
     
