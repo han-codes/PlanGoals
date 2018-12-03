@@ -79,20 +79,48 @@ extension GoalsVC: UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, editActionsForRowAt indexPath: IndexPath) -> [UITableViewRowAction]? {
-        let rowAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
+        let deleteAction = UITableViewRowAction(style: .destructive, title: "DELETE") { (rowAction, indexPath) in
             self.deleteCoreDataObject(indexPath: indexPath)
             self.fetchCoreDataObjects()
             
             tableView.deleteRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
-            rowAction.backgroundColor = UIColor.red
         }
-        return [rowAction]
+        
+        let addAction = UITableViewRowAction(style: .normal, title: "Add 1") { (rowAction, indexPath) in
+            self.setProgress(indexPath: indexPath)
+            tableView.reloadRows(at: [indexPath], with: UITableView.RowAnimation.automatic)
+        }
+        
+        deleteAction.backgroundColor = UIColor.red
+        addAction.backgroundColor = #colorLiteral(red: 0.9759346843, green: 0.5839473009, blue: 0.02618087828, alpha: 1)
+        return [deleteAction, addAction]
     }
-    
 }
 
-// Fetch and Remove from Core Data
+
 extension GoalsVC {
+    // Updates goalProgress attribute of Core Data
+    func setProgress(indexPath: IndexPath) {
+        guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
+        
+        let chosenGoal = goals[indexPath.row]
+        
+        if chosenGoal.goalProgress < chosenGoal.goalCompletionValue {
+            chosenGoal.goalProgress += 1
+        } else {
+            return
+        }
+        
+        do {
+            try managedContext.save()
+            print("Saved the updated progress successfully")
+        } catch {
+            debugPrint("Error saving updated goal progress: \(error.localizedDescription)")
+        }
+        
+    }
+    
+    // Deletes from Core Data
     func deleteCoreDataObject(indexPath: IndexPath) {
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
         
@@ -106,6 +134,7 @@ extension GoalsVC {
         }
     }
     
+    // Fetches from Core Data
     func fetch(completion: (_ success: Bool) -> ()) {
         guard let managedContext = appDelegate?.persistentContainer.viewContext else { return }
         
